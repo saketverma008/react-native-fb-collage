@@ -2,6 +2,7 @@ import * as React from 'react';
 import { ImageBackground, Text, TouchableOpacity, View, ViewStyle, TextStyle } from 'react-native';
 import { Props, ImageSource, FuncStyle, StaticStyle } from './fb-collage.type';
 import staticStyles from './fb-collage.style';
+import imageLoadingSpinner from './simple-loader.gif;
 
 export default class FBCollage extends React.Component<Props> {
   private styles: StaticStyle;
@@ -39,6 +40,7 @@ export default class FBCollage extends React.Component<Props> {
           source={source}
           resizeMode={resizeMode}
           blurRadius={blurRadius}
+          loadingIndicatorSource={imageLoadingSpinner}
         >
           {text && (
             <View
